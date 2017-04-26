@@ -20,7 +20,7 @@ export default Ember.Route.extend({
       });
       Ember.RSVP.all(review_deletions).then(function() {
         return rental.destroyRecord();
-      })
+      });
       this.transitionTo('index');
     },
     saveReview(params) {
